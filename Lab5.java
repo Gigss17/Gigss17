@@ -89,14 +89,14 @@ public class Lab5 extends GLJPanel implements GLEventListener, KeyListener{
 		gl2.glRotatef(rotateY,0,1,0);
 		gl2.glRotatef(rotateX,1,0,0);
 		
-		if(objectNumber==1) //Korkoci¹g
+		if(objectNumber==1) //KorkociÂ¹g
 		{
 			
 			gl2.glLineWidth(3);
 			gl2.glBegin(GL2.GL_LINE_STRIP); 
 			
 			float x,z;
-			float y = -9; //Wysokoœæ na pocz¹tku
+			float y = -9; //WysokoÅ“Ã¦ na poczÂ¹tku
 			float i;
 			int n = 11;
 			float distance = 0.25f;
@@ -107,18 +107,18 @@ public class Lab5 extends GLJPanel implements GLEventListener, KeyListener{
 				z = (float) Math.cos(i) * 5;
 				gl2.glColor3f(0.0f, 1.0f, 0.0f); //Zielony
 				gl2.glVertex3f(x, y, z);
-				y += 0.08; //Powiêkszenie
+				y += 0.08; //PowiÃªkszenie
 			}
 			gl2.glEnd();
 		}
-		else if(objectNumber==2) //rysowanie piramidy o podstawie n=12
+		else if(objectNumber==2) //rysowanie piramidy o podstawie n=11
 		{
 			
 			gl2.glLineWidth(3);
 			gl2.glBegin(GL2.GL_TRIANGLES); 
 			
 			float x,z;
-			float y = -4; //Wysokoœæ piramidy
+			float y = -4; //WysokoÅ“Ã¦ piramidy
 			int i;
 			int n = 11; //
 			int rozmiar =4;
@@ -135,11 +135,11 @@ public class Lab5 extends GLJPanel implements GLEventListener, KeyListener{
 			}
 			gl2.glEnd();
 			gl2.glBegin(GL2.GL_TRIANGLES); 
-				//Wielok¹t¹t o podstawie n =12
+				//WielokÂ¹tÂ¹t o podstawie n =11
 				for (i = 0; i<= n*2; i += 1) {
 					x = (float) Math.sin(i * 2 * Math.PI / n)*rozmiar;
 					z = (float) Math.cos(i * 2 * Math.PI / n)*rozmiar;
-					gl2.glColor3f(1.0f, 1.0f, 1.0f);  //Bia³y kolor podstawy
+					gl2.glColor3f(1.0f, 1.0f, 1.0f);  //BiaÂ³y kolor podstawy
 					gl2.glVertex3f(x, y, z);
 					if(i%2==0) {
 						gl2.glVertex3f(0, y, 0);}
